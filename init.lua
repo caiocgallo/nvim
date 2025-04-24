@@ -1,10 +1,13 @@
 require('config.lazy')
 
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.clipboard = "unnamedplus"
 vim.opt.fixeol = false -- avoid vim adding <EOL> at end of file
+vim.opt.scrolloff = 8
 
 vim.keymap.set("n", "<space><space>x", "<cmd>source %<CR>")
 vim.keymap.set("n", "<space><space>xx", function()
