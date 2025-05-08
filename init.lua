@@ -28,3 +28,5 @@ end)
 vim.keymap.set("v", "<space><space>jq", function()
 	vim.cmd(":%!jq .")
 end)
+
+vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
