@@ -30,7 +30,15 @@ return {
 					}
 				}
 			}
-
+			require("lspconfig").rust_analyzer.setup {
+				settings = {
+					['rust-analyzer'] = {
+						diagnostics = {
+							enable = false,
+						}
+					}
+				}
+			}
 
 			vim.api.nvim_create_autocmd('LspAttach', {
 				callback = function(args)
