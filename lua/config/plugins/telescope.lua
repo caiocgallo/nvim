@@ -50,9 +50,12 @@ return {
 				local word = vim.fn.expand("<cWORD>")
 				builtin.grep_string({ search = word })
 			end, { desc = "Find word (with special chars" })
+
 			map("n", "<leader>ps", function()
 				builtin.grep_string({ search = vim.fn.input("Grep > ") })
 			end, { desc = "Find in files " })
+
+			map("n", "<leader>fb", builtin.buffers, { desc = "List open buffers" })
 
 			require "config.telescope.multigrep".setup()
 		end
