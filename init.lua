@@ -9,8 +9,8 @@ vim.opt.clipboard = "unnamedplus"
 vim.opt.fixeol = false -- avoid vim adding <EOL> at end of file
 vim.opt.scrolloff = 8
 
-vim.keymap.set("n", "<space><space>x", "<cmd>source %<CR>")
-vim.keymap.set("n", "<space><space>xx", function()
+vim.keymap.set("n", "<leader><leader>x", "<cmd>source %<CR>")
+vim.keymap.set("n", "<leader><leader>xx", function()
 	if vim.bo.filetype == 'lua' then
 		vim.cmd(":.lua")
 	elseif vim.bo.filetype == 'sh' then
@@ -22,10 +22,10 @@ vim.keymap.set("n", "<space><space>xx", function()
 	end
 end)
 
-vim.keymap.set("n", "<space><space>jq", function()
+vim.keymap.set("n", "<leader><leader>jq", function()
 	vim.cmd(":%!jq .")
 end)
-vim.keymap.set("v", "<space><space>jq", function()
+vim.keymap.set("v", "<leader><leader>jq", function()
 	vim.cmd(":%!jq .")
 end)
 

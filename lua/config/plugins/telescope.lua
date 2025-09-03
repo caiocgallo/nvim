@@ -33,24 +33,24 @@ return {
 			require('telescope').load_extension('fzf')
 			local map = vim.keymap.set
 
-			map("n", "<space>fd", require('telescope.builtin').find_files, { desc = "Find files" })
-			map("n", "<space>en", function()
+			map("n", "<leader>fd", require('telescope.builtin').find_files, { desc = "Find files" })
+			map("n", "<leader>en", function()
 				require('telescope.builtin').find_files {
 					cwd = vim.fn.stdpath("config")
 				}
 			end, { desc = "Open nvim config folder" })
 
 			local builtin = require('telescope.builtin')
-			map("n", "<space>pws", function()
+			map("n", "<leader>pws", function()
 				local word = vim.fn.expand("<cword>")
 				builtin.grep_string({ search = word })
 			end, { desc = "Find word (chars only)" })
 
-			map("n", "<space>pWs", function()
+			map("n", "<leader>pWs", function()
 				local word = vim.fn.expand("<cWORD>")
 				builtin.grep_string({ search = word })
 			end, { desc = "Find word (with special chars" })
-			map("n", "<space>ps", function()
+			map("n", "<leader>ps", function()
 				builtin.grep_string({ search = vim.fn.input("Grep > ") })
 			end, { desc = "Find in files " })
 
