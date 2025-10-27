@@ -56,6 +56,7 @@ return {
 			end, { desc = "Find in files " })
 
 			map("n", "<leader>fb", builtin.buffers, { desc = "List open buffers" })
+			map("n", "<leader>fh", builtin.help_tags, { desc = "Help Tags" })
 
 			require "config.telescope.multigrep".setup()
 		end
